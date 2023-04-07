@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9100.15.0828.1711                                -->
+<workbook source-platform='win' version='9.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (top100banks2017-12-31)' inline='true' name='excel-direct.45023.468155902781' version='9.1'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\cibi\Downloads\top100banks2017-12-31.xlsx' interpretationMode='0' password='' server='' username='' validate='no'>
+        <relation name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:E121:no:A1:E121' header='yes' outcome='6'>
+            <column datatype='integer' name='rank' ordinal='0' />
+            <column datatype='string' name='bank' ordinal='1' />
+            <column datatype='string' name='country' ordinal='2' />
+            <column datatype='real' name='total_assets_us_b' ordinal='3' />
+            <column datatype='date' name='balance_sheet' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bank</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bank]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>bank</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_assets_us_b</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_assets_us_b]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>total_assets_us_b</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>balance_sheet</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[balance_sheet]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>balance_sheet</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E121:no:A1:E121&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Balance Sheet' datatype='date' name='[balance_sheet]' role='dimension' type='ordinal' />
+      <column caption='Bank' datatype='string' name='[bank]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Rank' datatype='integer' name='[rank]' role='measure' type='quantitative' />
+      <column caption='Total Assets Us B' datatype='real' name='[total_assets_us_b]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.3' measure-ordering='alphabetic' measure-percentage='0.651724' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (top100banks2017-12-31)' name='excel-direct.45023.468155902781' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.45023.468155902781'>
+            <column caption='AVG(0.0)' datatype='real' name='[Calculation_986006856298946563]' role='measure' type='quantitative' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='AVG(0.0)' />
+            </column>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_assets_us_b]' derivation='Sum' name='[sum:total_assets_us_b:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Assets Us B' datatype='real' name='[total_assets_us_b]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_986006856298946563]' derivation='User' name='[usr:Calculation_986006856298946563:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[excel-direct.45023.468155902781].[usr:Calculation_986006856298946563:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='511' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width-header' value='60' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+              <text column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='780' />
+                <format attr='maxwidth' value='780' />
+                <format attr='minheight' value='439' />
+                <format attr='maxheight' value='439' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' x-axis-name='[excel-direct.45023.468155902781].[usr:Calculation_986006856298946563:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[excel-direct.45023.468155902781].[none:country:nk]' />
+              <wedge-size column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+              <size column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+              <text column='[excel-direct.45023.468155902781].[none:country:nk]' />
+              <text column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' x-axis-name='[excel-direct.45023.468155902781].[usr:Calculation_986006856298946563:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+              <text column='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.42779004573822021' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([excel-direct.45023.468155902781].[usr:Calculation_986006856298946563:qk] + [excel-direct.45023.468155902781].[usr:Calculation_986006856298946563:qk])</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='1' param='[excel-direct.45023.468155902781].[sum:total_assets_us_b:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[excel-direct.45023.468155902781].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.45023.468155902781].[none:country:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      0wAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
