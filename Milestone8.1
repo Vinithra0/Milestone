@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">
+    My Tableau Visualization
+  </div>
+  <div class="card-body">
+    <div class="tableauPlaceholder" id="myViz"></div>
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script>
+      var placeholderDiv = document.getElementById("myViz");
+      var url = "https://public.tableau.com/views/MyTableauVisualization/MyDashboard?:embed=y&:display_count=yes";
+      var options = {
+        hideTabs: true,
+        onFirstInteractive: function () {
+          console.log("Tableau visualization loaded successfully");
+        }
+      };
+      var viz = new tableau.Viz(placeholderDiv, url, options);
+    </script>
+  </div>
+</div>
